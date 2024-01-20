@@ -1,3 +1,4 @@
+import 'package:admin/Dashboard/home.dart';
 import 'package:admin/auth/Signin.dart';
 import 'package:flutter/material.dart';
 
@@ -17,5 +18,6 @@ class MyApp extends StatelessWidget {
         fontFamily: 'poppins',
       ),
       home: SignIn(),
+      // home: Home(),
     );
   }}

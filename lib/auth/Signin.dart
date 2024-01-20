@@ -1,3 +1,4 @@
+import 'package:admin/Dashboard/home.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -35,30 +36,28 @@ class _SignInState extends State<SignIn> {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 150),
-                  child: Image.asset(
-                    'asset/images/alridabgn.png',
-                    width: Width * 0.45,
-                  ),
+                Image.asset(
+                  'asset/images/alridabgn.png',
+                  width: Width * 0.45,
                 ),
               ],
             ),
+            SizedBox(width: Width*0.1,),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 30),
+                  margin: EdgeInsets.symmetric(horizontal: Width*0.015),
                   height: Height * .6,
                   width: Width * 0.3,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(Width*0.005),
                       // color: Colors.blueAccent,
                       border: Border.all(width: 2)),
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 20,
+                        height: Height*0.01,
                       ),
                       Text(
                         'Sign In',
@@ -68,7 +67,7 @@ class _SignInState extends State<SignIn> {
                             color: Colors.white),
                       ),
                       SizedBox(
-                        height: 40,
+                        height: Height*0.04,
                       ),
                       Container(
                         height: Height * 0.45,
@@ -81,7 +80,7 @@ class _SignInState extends State<SignIn> {
                                 Text(
                                   'Email',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: Height*0.025,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white),
                                 ),
@@ -94,29 +93,29 @@ class _SignInState extends State<SignIn> {
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(width: 2),
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(Width*0.005),
                                   ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(Width*0.005),
                                     borderSide: BorderSide(
                                         width: 4, color: Color(0xffe97427)),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(Width*0.005),
                                     borderSide: BorderSide(
                                         width: 4, color: Color(0xffe97427)),
                                   ),
                                   hintText: 'Enter your Email',
                                   hintStyle: TextStyle(color: Colors.grey)),
                             ),
-                            SizedBox(height: 20,),
+                            SizedBox(height: Height*0.04,),
 
                             Row(
                               children: [
                                 Text(
                                   'Password',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: Height*0.025,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white),
                                 ),
@@ -127,60 +126,59 @@ class _SignInState extends State<SignIn> {
                               style: TextStyle(color: Colors.white),
                               controller: _passwordController,
                               decoration: InputDecoration(
-                                  suffixIcon: Padding(
-                                    padding: const EdgeInsets.only(right: 10),
-                                    child: IconButton(
-                                      icon: Icon(
-                                        _obscureText ? Icons.visibility_off : Icons.visibility,
-                                        color: Colors.grey,
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _obscureText = !_obscureText;
-                                          if (_obscureText) {
-                                            _passwordFocus.unfocus();
-                                          } else {
-                                            _passwordFocus.requestFocus();
-                                          }
-                                        });
-                                      },
+                                  suffixIcon: IconButton(
+                                    icon: Icon(
+                                      _obscureText ? Icons.visibility_off : Icons.visibility,
+                                      color: Colors.grey,
                                     ),
+                                    onPressed: () {
+                                      setState(() {
+                                        _obscureText = !_obscureText;
+                                        if (_obscureText) {
+                                          _passwordFocus.unfocus();
+                                        } else {
+                                          _passwordFocus.requestFocus();
+                                        }
+                                      });
+                                    },
                                   ),
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(width: 2),
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(Width*0.005),
                                   ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(Width*0.005),
                                     borderSide: BorderSide(
                                         width: 4, color: Color(0xffe97427)),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(Width*0.005),
                                     borderSide: BorderSide(
                                         width: 4, color: Color(0xffe97427)),
                                   ),
                                   hintText: 'Enter your password',
                                   hintStyle: TextStyle(color: Colors.grey)),
                             ),
-                            SizedBox(height: 60,),
+                            SizedBox(height: Height*0.10),
                             SizedBox(
-                              height: 60,
+                              height: Height*0.08,
                               width: Width*0.3,
                               child: ElevatedButton(
                                 onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+
                                   // Add your button onPressed logic here
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.black, // Background color
                                   foregroundColor: Colors.white, // Text color
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0), // Rectangular border radius
+                                    borderRadius: BorderRadius.circular(Width*0.005), // Rectangular border radius
                                   ),
                                 ),
                                 child: Text('Sign In',style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20
+                                  fontSize: Height*0.025
                                 ),),),
                             )
                           ],
@@ -192,7 +190,7 @@ class _SignInState extends State<SignIn> {
               ],
             ),
             SizedBox(
-              width: 100,
+              width:Width*0.1,
             ) //imp
           ],
         ),
