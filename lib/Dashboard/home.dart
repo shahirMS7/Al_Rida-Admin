@@ -1,3 +1,4 @@
+import 'package:admin/Dashboard/EditItem.dart';
 import 'package:admin/Dashboard/OnGoingOrders.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class Home extends StatelessWidget {
       {
         'title': 'Edit Item',
         'image': 'asset/images/edit item.jpg',
-        'page': OnGoingOrders()
+        'page': EditItem()
       },
       {
         'title': 'Users List',
@@ -133,18 +134,7 @@ class Home extends StatelessWidget {
                         );
                       },
                     )
-                        //             GridView.builder(
-                        //                 gridDelegate:
-                        //                     SliverGridDelegateWithFixedCrossAxisCount(
-                        //                         crossAxisCount: 3,
-                        //                         crossAxisSpacing: 20,
-                        //                         mainAxisSpacing: 20,
-                        //                         childAspectRatio: 6 / 3.4),
-                        //                 children: [
 
-                        //
-                        //   ],
-                        // ),
                         ),
                   )
                 ]))));

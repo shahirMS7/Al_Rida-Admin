@@ -1,3 +1,4 @@
+import 'package:admin/Dashboard/EditItem.dart';
 import 'package:admin/Dashboard/OnGoingOrders.dart';
 import 'package:admin/Dashboard/home.dart';
 import 'package:admin/auth/Signin.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'poppins',
       ),
-      home: SignIn(),
-      // home: OnGoingOrders(),
+      // home: SignIn(),
+      home: EditItem(),
     );
   }}
