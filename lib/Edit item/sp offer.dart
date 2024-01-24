@@ -9,8 +9,23 @@ class SpOffer extends StatelessWidget {
     final Width = MediaQuery.of(context).size.width;
     List<Map<String, dynamic>> items = [
       {
-        'title': 'Special Offer',
-        'image': 'asset/icons/special-offer.png',
+        'title': 'Grilled chicken',
+        'image': 'asset/images/sp6.png',
+        // 'page': SpOffer()
+      },
+      {
+        'title': 'Shawaya',
+        'image': 'asset/images/menu/sp2.png',
+        // 'page': SpOffer()
+      },
+      {
+        'title': 'Tandoori Chicken',
+        'image': 'asset/images/menu/delicious-chicken-table.jpg',
+        // 'page': SpOffer()
+      },
+      {
+        'title': 'Chicken Lollipop',
+        'image': 'asset/images/menu/sp5.png',
         // 'page': SpOffer()
       },
 
@@ -85,12 +100,29 @@ class SpOffer extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Add or Remove item',
+                                'Special offer',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
+                              InkWell(
+                                onTap: (){},
+                                child: SizedBox(
+                                    height: Height * 0.07,
+                                    width: Width * 0.06,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Color(0xff3C8A3C),
+                                      ),
+                                      child: Icon(
+                                        Icons.add,
+                                        size: Height*0.05,
+                                        color: Colors.white,
+                                      ),
+                                    )),
+                              ),
                               SizedBox(
                                 height: Height * 0.05,
                                 width: Width * 0.07,
@@ -129,11 +161,11 @@ class SpOffer extends StatelessWidget {
                               // color: Colors.greenAccent,
                               child: GridView.builder(
                                 gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
+                                    SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 3,
                                   crossAxisSpacing: 60,
                                   mainAxisSpacing: 60,
-                                  childAspectRatio: 7.5 / 5,
+                                  childAspectRatio: 5 / 3,
                                 ),
                                 itemCount: items.length,
                                 itemBuilder: (context, index) {
@@ -143,60 +175,30 @@ class SpOffer extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                            items[index]['page'],
+                                                items[index]['page'],
                                           ));
                                     },
-                                    child:
-                                      Container(
-
-                                        margin: EdgeInsets.all(Height*0.005),
-                                        height: Height*0.2,
-                                        width: Width*0.2,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(Width*0.01),
-                                          border: Border.all(),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.white,
+                                        border: Border.all(),
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                items[index]['image']),
+                                            fit: BoxFit.cover),
+                                      ),
+                                      child: Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Text(
+                                          items[index]['title'],
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: Width * 0.015,
+                                              color: Colors.white),
                                         ),
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                          children: [
-                                            Container(
-                                              margin: EdgeInsets.all(Height*0.04),
-                                              height: Height*0.18,
-                                              width: Width*0.2,
-                                              decoration: BoxDecoration(
-                                                border: Border.all(),
-                                                borderRadius: BorderRadius.circular(Width*0.01),
-                                                color: Colors.greenAccent
-                                              ),
-                                            ),
-                                            Text('Grilled Chicken',style: TextStyle(fontSize: Height*0.025,fontWeight: FontWeight.bold))
-                                          ],
-                                        ),
-                                      )
-                                    // Container(
-                                    //   decoration: BoxDecoration(
-                                    //     borderRadius:
-                                    //     BorderRadius.circular(10),
-                                    //     color: Colors.white,
-                                    //     border: Border.all(),
-                                    //     image: DecorationImage(
-                                    //         image: AssetImage(
-                                    //             items[index]['image']
-                                    //         ),
-                                    //
-                                    //         fit: BoxFit.none),
-                                    //   ),
-                                    //   child:  Align(
-                                    //     alignment: Alignment.bottomCenter,
-                                    //     child: Text(
-                                    //       items[index]['title'],
-                                    //       style: TextStyle(
-                                    //         fontWeight: FontWeight.bold,
-                                    //         fontSize: Width * 0.015,
-                                    //       ),
-                                    //     ),
-                                    //   ),
-                                    // ),
+                                      ),
+                                    ),
                                   );
                                 },
                               ))

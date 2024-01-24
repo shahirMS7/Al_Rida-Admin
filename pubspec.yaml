@@ -55,6 +55,7 @@ flutter:
   assets:
     - asset/images/
     - asset/icons/
+    - asset/images/menu/
     - asset/images/alridabgn.png
     - asset/images/background.png
     - asset/icons/bell.png
@@ -64,6 +65,7 @@ flutter:
     - asset/images/myshop.jpg
     - asset/images/on going.jpg
     - asset/images/userlist.jpg
+    - asset/icons/plus.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

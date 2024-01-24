@@ -40,11 +40,7 @@ class EditItem extends StatelessWidget {
         'image': 'asset/icons/drinks.png',
         'page': Drinks()
       },
-      {
-        'title': 'Add',
-        'image': 'asset/icons/add.png',
-        'page': Add()
-      },
+
     ];
     return Scaffold(
       body: Container(
@@ -122,6 +118,23 @@ class EditItem extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
+                              InkWell(
+                                onTap: (){},
+                                child: SizedBox(
+                                    height: Height * 0.07,
+                                    width: Width * 0.06,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Color(0xff3C8A3C),
+                                      ),
+                                      child: Icon(
+                                        Icons.add,
+                                        size: Height*0.05,
+                                        color: Colors.white,
+                                      ),
+                                    )),
+                              ),
                               SizedBox(
                                 height: Height * 0.05,
                                 width: Width * 0.07,
