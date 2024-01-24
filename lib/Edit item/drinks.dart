@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,32 +12,32 @@ class Drinks extends StatelessWidget {
       {
         'title': '7 Up',
         'image': 'asset/images/menu/7up.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: '7 Up',image:'asset/images/menu/7up.png',price: '39',discription: '7 Up' ,)
       },
       {
         'title': 'Coca Cola',
         'image': 'asset/images/menu/coca.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:  'Coca Cola',image:'asset/images/menu/coca.png',price: '39',discription:  'Coca Cola' ,)
       },
       {
         'title': 'Pepsi',
         'image': 'asset/images/menu/pepsi.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Pepsi',image:'asset/images/menu/pepsi.png',price: '39',discription: 'Pepsi' ,)
       },
       {
         'title': 'Mirinda',
         'image': 'asset/images/menu/miri.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Mirinda',image:'asset/images/menu/miri.png',price: '39',discription: 'Mirinda',)
       },
       {
         'title': 'Montain Dew',
         'image': 'asset/images/menu/mountain dew.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:'Montain Dew',image:'asset/images/menu/mountain dew.png',price: '39',discription: 'Montain Dew' ,)
       },
       {
         'title': 'Water',
         'image': 'asset/images/menu/water.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:'Water',image:'asset/images/menu/water.png',price: '39',discription: 'Water' ,)
       },
 
 

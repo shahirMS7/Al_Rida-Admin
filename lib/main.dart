@@ -1,6 +1,7 @@
 import 'package:admin/Dashboard/EditItem.dart';
 import 'package:admin/Dashboard/OnGoingOrders.dart';
 import 'package:admin/Dashboard/home.dart';
+import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:admin/Edit%20item/sp%20offer.dart';
 import 'package:admin/auth/Signin.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,6 @@ class MyApp extends StatelessWidget {
         fontFamily: 'poppins',
       ),
       home: SignIn(),
-      // home: SpOffer(),
+      // home: SpOffer()
     );
   }}

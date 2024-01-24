@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,22 +12,22 @@ class Dip extends StatelessWidget {
       {
         'title': 'Mayonnaise',
         'image': 'asset/images/menu/mayo.jpeg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:'Mayonnaise',image:'asset/images/menu/mayo.jpeg',price: '19',discription: 'Mayonnaise' ,)
       },
       {
         'title': 'Ketchup',
         'image': 'asset/images/menu/ketchup.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:'Ketchup',image:'asset/images/menu/ketchup.jpg',price: '19',discription: 'Ketchup' ,)
       },
       {
         'title': 'Hummus',
         'image': 'asset/images/menu/hummus.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:'Hummus',image:'asset/images/menu/hummus.jpg',price: '19',discription:'Hummus' ,)
       },
       {
         'title': 'Pesto',
         'image': 'asset/images/menu/pesto-dip.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Pesto',image:'asset/images/menu/pesto-dip.jpg',price: '19',discription: 'Pesto',)
       },
 
 

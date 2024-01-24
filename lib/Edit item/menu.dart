@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,42 +12,42 @@ class FriedChicken extends StatelessWidget {
       {
         'title': '1 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '1 Pcs',image:'asset/images/menu/menu.png',price: '69',discription: '1 Pcs' ,)
       },
       {
         'title': '2 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '2 Pcs',image:'asset/images/menu/menu.png',price: '129',discription: '2 Pcs' ,)
       },
       {
         'title': '4 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '4 Pcs',image:'asset/images/menu/menu.png',price: '269',discription: '4 Pcs' ,)
       },
       {
         'title': '6 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '6 Pcs',image:'asset/images/menu/menu.png',price: '409',discription: '6 Pcs' ,)
       },
       {
         'title': '8 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '8 Pcs',image:'asset/images/menu/menu.png',price: '589',discription: '8 Pcs' ,)
       },
       {
         'title': '10 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '10 Pcs',image:'asset/images/menu/menu.png',price: '649',discription: '10 Pcs' ,)
       },
       {
         'title': '16 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '16 Pcs',image:'asset/images/menu/menu.png',price: '1019',discription: '16 Pcs' ,)
       },
       {
         'title': '24 Pcs',
         'image': 'asset/images/menu/menu.png',
-        // 'page': SpOffer()
+        'page': ItemDetails(title: '24 Pcs',image:'asset/images/menu/menu.png',price: '1519',discription: '24 Pcs' ,)
       },
 
 

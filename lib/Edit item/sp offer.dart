@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,22 +12,22 @@ class SpOffer extends StatelessWidget {
       {
         'title': 'Grilled chicken',
         'image': 'asset/images/sp6.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Grilled chicken',image:'asset/images/sp6.png',price: '119',discription: 'Grilled chicken' ,)
       },
       {
         'title': 'Shawaya',
         'image': 'asset/images/menu/sp2.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Shawaya',image:'asset/images/menu/sp2.png',price: '119',discription:'Shawaya' ,)
       },
       {
         'title': 'Tandoori Chicken',
         'image': 'asset/images/menu/delicious-chicken-table.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title:'Tandoori Chicken',image:'asset/images/menu/delicious-chicken-table.jpg',price: '119',discription: 'Tandoori Chicken',)
       },
       {
         'title': 'Chicken Lollipop',
         'image': 'asset/images/menu/sp5.png',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Tandoori Chicken',image:'asset/images/menu/sp5.png',price: '119',discription: 'Tandoori Chicken' ,)
       },
 
     ];

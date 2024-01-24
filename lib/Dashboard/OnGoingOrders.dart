@@ -246,7 +246,7 @@ class OnGoingOrders extends StatelessWidget {
                                                   style:
                                                       ElevatedButton.styleFrom(
                                                     backgroundColor: Color(
-                                                        0xff911f2a), // Background color of the button
+                                                          0xff911f2a), // Background color of the button
                                                     foregroundColor: Colors
                                                         .white, // Text color
                                                     shape:

@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,22 +12,22 @@ class Breads extends StatelessWidget {
       {
         'title': 'Bun',
         'image': 'asset/images/menu/bun.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Bun',image:'asset/images/menu/bun.jpg',price: '9',discription:'Bun',)
       },
       {
         'title': 'Kuboose',
         'image': 'asset/images/menu/kuboose.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Kuboose',image:'asset/images/menu/kuboose.jpg',price: '9',discription:'Kuboose',)
       },
       {
         'title': 'Butter Bread',
         'image': 'asset/images/menu/buttur-rotti-min.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Butter Bread',image:'asset/images/menu/buttur-rotti-min.jpg',price: '19',discription: 'Butter Bread',)
       },
       {
         'title': 'Garlic Bread',
         'image': 'asset/images/menu/garlic-bread-min.jpg',
-        // 'page': SpOffer()
+        'page': SpItemDetails(title: 'Garlic Bread',image:'asset/images/menu/garlic-bread-min.jpg',price: '19',discription:'Garlic Bread',)
       },
 
 
