@@ -154,7 +154,7 @@ class EditItem extends StatelessWidget {
                                   child: Text(
                                     'Update',
                                     style: TextStyle(
-                                      fontSize: Height * 0.02,
+                                      fontSize: Height * 0.018,
                                     ),
                                   ),
                                 ),
