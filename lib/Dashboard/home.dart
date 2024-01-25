@@ -1,5 +1,8 @@
+import 'package:admin/Dashboard/CompletedList.dart';
 import 'package:admin/Dashboard/EditItem.dart';
+import 'package:admin/Dashboard/MyShop.dart';
 import 'package:admin/Dashboard/OnGoingOrders.dart';
+import 'package:admin/Dashboard/UserList.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -23,17 +26,17 @@ class Home extends StatelessWidget {
       {
         'title': 'Users List',
         'image': 'asset/images/userlist.jpg',
-        'page': OnGoingOrders()
+        'page': UserList()
       },
       {
         'title': 'Completed List',
         'image': 'asset/images/cmpled food orders.jpg',
-        'page': OnGoingOrders()
+        'page': Completed()
       },
       {
         'title': 'My Shop',
         'image': 'asset/images/myshop.jpg',
-        'page': OnGoingOrders()
+        'page': MyShop()
       },
       {
         'title': 'Delivery Boy',

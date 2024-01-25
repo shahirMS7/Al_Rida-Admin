@@ -1,21 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class UserList extends StatelessWidget {
-  const UserList({super.key});
+class Completed extends StatelessWidget {
+  const Completed({super.key});
   @override
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
     final Width = MediaQuery.of(context).size.width;
     List<Map<String, dynamic>> items = [
       {
-        'title': 'User2',
+        'title': 'Order No:001',
       },
       {
-        'title': 'User2',
+        'title': 'Order No:002',
 
       },
-      ];
+    ];
 
     return Scaffold(
       body: Container(
@@ -87,7 +87,7 @@ class UserList extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Users List',
+                                'Completed List',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
@@ -147,8 +147,8 @@ class UserList extends StatelessWidget {
                               width: Width * 0.8,
                               // color: Colors.greenAccent,
                               child: ListView.separated(
-                                  // padding: EdgeInsets.symmetric(
-                                  //     vertical: Height * 0.05),
+                                // padding: EdgeInsets.symmetric(
+                                //     vertical: Height * 0.05),
                                   scrollDirection: Axis.vertical,
                                   itemCount: items.length,
                                   separatorBuilder: (context, index) =>
@@ -181,8 +181,8 @@ class UserList extends StatelessWidget {
                                               iconSize: Height * 0.05,
                                               onPressed: () {},
                                               icon: Icon(Icons
-                                                  .delete_outline_outlined),
-                                              color: Color(0xff911f2a),
+                                                  .check_circle_outline_outlined),
+                                              color: Colors.black,
                                             ),
                                             SizedBox(
                                               width: Width * 0.05,
