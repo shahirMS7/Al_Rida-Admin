@@ -36,6 +36,14 @@ class _SignInState extends State<SignIn> {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    IconButton(onPressed: (){}, icon: Icon(Icons.supervised_user_circle_outlined),iconSize: Height*0.06,color:Color(0xffe97427),),
+                    // Spacer(),
+                    SizedBox(width: Width*.,)
+                  ],
+                ),
                 Image.asset(
                   'asset/images/alridabgn.png',
                   width: Width * 0.45,
