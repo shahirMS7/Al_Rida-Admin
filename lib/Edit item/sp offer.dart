@@ -1,4 +1,5 @@
 import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
+import 'package:admin/Edit%20item/Sp%20add%20item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -108,7 +109,9 @@ class SpOffer extends StatelessWidget {
                               ),
                               Spacer(),
                               InkWell(
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) =>SpItemAdd() ,));
+                                },
                                 child: SizedBox(
                                     height: Height * 0.07,
                                     width: Width * 0.06,

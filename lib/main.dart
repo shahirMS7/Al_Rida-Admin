@@ -20,8 +20,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'poppins',
+        // useMaterial3: true,
+        // primaryColor: Colors.black,
+        // primarySwatch: MaterialColor()
       ),
       home: SignIn(),
-      // home: SpOffer()
+      // home: Home(),
+      // home: OnGoingOrders()
     );
   }}

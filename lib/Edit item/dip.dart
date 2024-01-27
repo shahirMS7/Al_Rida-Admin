@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Item%20details.dart';
 import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,22 +13,22 @@ class Dip extends StatelessWidget {
       {
         'title': 'Mayonnaise',
         'image': 'asset/images/menu/mayo.jpeg',
-        'page': SpItemDetails(title:'Mayonnaise',image:'asset/images/menu/mayo.jpeg',price: '19',discription: 'Mayonnaise' ,)
+        'page': ItemDetails(title:'Mayonnaise',image:'asset/images/menu/mayo.jpeg',price: '19',discription: 'Mayonnaise' ,)
       },
       {
         'title': 'Ketchup',
         'image': 'asset/images/menu/ketchup.jpg',
-        'page': SpItemDetails(title:'Ketchup',image:'asset/images/menu/ketchup.jpg',price: '19',discription: 'Ketchup' ,)
+        'page': ItemDetails(title:'Ketchup',image:'asset/images/menu/ketchup.jpg',price: '19',discription: 'Ketchup' ,)
       },
       {
         'title': 'Hummus',
         'image': 'asset/images/menu/hummus.jpg',
-        'page': SpItemDetails(title:'Hummus',image:'asset/images/menu/hummus.jpg',price: '19',discription:'Hummus' ,)
+        'page': ItemDetails(title:'Hummus',image:'asset/images/menu/hummus.jpg',price: '19',discription:'Hummus' ,)
       },
       {
         'title': 'Pesto',
         'image': 'asset/images/menu/pesto-dip.jpg',
-        'page': SpItemDetails(title: 'Pesto',image:'asset/images/menu/pesto-dip.jpg',price: '19',discription: 'Pesto',)
+        'page': ItemDetails(title: 'Pesto',image:'asset/images/menu/pesto-dip.jpg',price: '19',discription: 'Pesto',)
       },
 
 
@@ -103,7 +104,7 @@ class Dip extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Special offer',
+                                'Dips',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
@@ -145,7 +146,7 @@ class Dip extends StatelessWidget {
                                   child: Text(
                                     'Update',
                                     style: TextStyle(
-                                      fontSize: Height * 0.02,
+                                      fontSize: Height * 0.018,
                                     ),
                                   ),
                                 ),

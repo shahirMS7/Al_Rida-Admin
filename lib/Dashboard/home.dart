@@ -1,8 +1,10 @@
 import 'package:admin/Dashboard/CompletedList.dart';
 import 'package:admin/Dashboard/EditItem.dart';
 import 'package:admin/Dashboard/MyShop.dart';
+import 'package:admin/Dashboard/Notifications.dart';
 import 'package:admin/Dashboard/OnGoingOrders.dart';
 import 'package:admin/Dashboard/UserList.dart';
+import 'package:admin/Dashboard/deliveryboy.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -41,7 +43,7 @@ class Home extends StatelessWidget {
       {
         'title': 'Delivery Boy',
         'image': 'asset/images/delivery boy.jpg',
-        'page': OnGoingOrders()
+        'page': DelievryBoy()
       },
     ];
     return Scaffold(
@@ -58,25 +60,29 @@ class Home extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Column(children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         'Dashboard',
                         style: TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
+                      Spacer(),
                       Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
-                              color: Colors.black),
+                              color: Color(0xffF6AF40)),
                           child: IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context,  MaterialPageRoute(builder: (context) => AdminNotification()));
+                              },
                               icon: ImageIcon(
                                 AssetImage(
                                   'asset/icons/bell.png',
+
                                 ),
-                                color: Colors.white,
-                              )))
+                                color: Colors.black,
+                              ))),
+                      SizedBox(width: Width*0.02,),
                     ],
                   ),
                   SizedBox(

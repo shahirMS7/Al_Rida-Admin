@@ -93,23 +93,29 @@ class Completed extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
-                              // InkWell(
-                              //   onTap: () {},
-                              //   child: SizedBox(
-                              //       height: Height * 0.07,
-                              //       width: Width * 0.06,
-                              //       child: Container(
-                              //         decoration: BoxDecoration(
-                              //           shape: BoxShape.circle,
-                              //           color: Color(0xff3C8A3C),
-                              //         ),
-                              //         child: Icon(
-                              //           Icons.add,
-                              //           size: Height * 0.05,
-                              //           color: Colors.white,
-                              //         ),
-                              //       )),
-                              // ),
+                              SizedBox(
+                                height: Height * 0.05,
+                                width: Width * 0.07,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    // Add your button click logic here
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color(0xff911f2a),
+                                    foregroundColor: Colors.white, // Text color
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(Height *
+                                          0.01), // Adjust the border radius as needed
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Clear',
+                                    style: TextStyle(
+                                      fontSize: Height * 0.018,
+                                    ),
+                                  ),
+                                ),
+                              ),
                               // SizedBox(
                               //   height: Height * 0.05,
                               //   width: Width * 0.07,
@@ -146,18 +152,14 @@ class Completed extends StatelessWidget {
                               height: Height * 0.7,
                               width: Width * 0.8,
                               // color: Colors.greenAccent,
-                              child: ListView.separated(
+                              child: ListView.builder(
                                 // padding: EdgeInsets.symmetric(
                                 //     vertical: Height * 0.05),
                                   scrollDirection: Axis.vertical,
                                   itemCount: items.length,
-                                  separatorBuilder: (context, index) =>
-                                      SizedBox(
-                                          height: Height *
-                                              0.001), // Add a gap between items
                                   itemBuilder: (context, index) {
                                     return Container(
-                                        margin: EdgeInsets.all(Width * 0.02),
+                                        margin: EdgeInsets.all(Width * 0.01),
                                         height: Height * 0.1,
                                         decoration: BoxDecoration(
                                           color: Colors.white,
@@ -182,7 +184,7 @@ class Completed extends StatelessWidget {
                                               onPressed: () {},
                                               icon: Icon(Icons
                                                   .check_circle_outline_outlined),
-                                              color: Colors.black,
+                                              color: Color(0xff3C8A3C),
                                             ),
                                             SizedBox(
                                               width: Width * 0.05,

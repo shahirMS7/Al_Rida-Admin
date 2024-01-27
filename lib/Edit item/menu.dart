@@ -1,4 +1,5 @@
 import 'package:admin/Edit%20item/Item%20details.dart';
+import 'package:admin/Edit%20item/MenuItemAdd.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -129,7 +130,9 @@ class FriedChicken extends StatelessWidget {
                               ),
                               Spacer(),
                               InkWell(
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => MenuItemAdd(),));
+                                },
                                 child: SizedBox(
                                     height: Height * 0.07,
                                     width: Width * 0.06,
@@ -164,7 +167,7 @@ class FriedChicken extends StatelessWidget {
                                   child: Text(
                                     'Update',
                                     style: TextStyle(
-                                      fontSize: Height * 0.02,
+                                      fontSize: Height * 0.018,
                                     ),
                                   ),
                                 ),

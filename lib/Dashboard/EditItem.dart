@@ -1,4 +1,4 @@
-import 'package:admin/Edit%20item/add.dart';
+import 'package:admin/Edit%20item/MenuItemAdd.dart';
 import 'package:admin/Edit%20item/breads.dart';
 import 'package:admin/Edit%20item/dip.dart';
 import 'package:admin/Edit%20item/drinks.dart';
@@ -112,53 +112,53 @@ class EditItem extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Add or Remove item',
+                                'Item Catagory',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
-                              InkWell(
-                                onTap: (){},
-                                child: SizedBox(
-                                    height: Height * 0.07,
-                                    width: Width * 0.06,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Color(0xff3C8A3C),
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        size: Height*0.05,
-                                        color: Colors.white,
-                                      ),
-                                    )),
-                              ),
-                              SizedBox(
-                                height: Height * 0.05,
-                                width: Width * 0.07,
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    // Add your button click logic here
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.blueAccent
-                                        .shade400, // Background color of the button
-                                    foregroundColor: Colors.white, // Text color
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(Height *
-                                          0.01), // Adjust the border radius as needed
-                                    ),
-                                  ),
-                                  child: Text(
-                                    'Update',
-                                    style: TextStyle(
-                                      fontSize: Height * 0.018,
-                                    ),
-                                  ),
-                                ),
-                              ),
+                              // InkWell(
+                              //   onTap: (){},
+                              //   child: SizedBox(
+                              //       height: Height * 0.07,
+                              //       width: Width * 0.06,
+                              //       child: Container(
+                              //         decoration: BoxDecoration(
+                              //           shape: BoxShape.circle,
+                              //           color: Color(0xff3C8A3C),
+                              //         ),
+                              //         child: Icon(
+                              //           Icons.add,
+                              //           size: Height*0.05,
+                              //           color: Colors.white,
+                              //         ),
+                              //       )),
+                              // ),
+                              // SizedBox(
+                              //   height: Height * 0.05,
+                              //   width: Width * 0.07,
+                              //   child: ElevatedButton(
+                              //     onPressed: () {
+                              //       // Add your button click logic here
+                              //     },
+                              //     style: ElevatedButton.styleFrom(
+                              //       backgroundColor: Colors.blueAccent
+                              //           .shade400, // Background color of the button
+                              //       foregroundColor: Colors.white, // Text color
+                              //       shape: RoundedRectangleBorder(
+                              //         borderRadius: BorderRadius.circular(Height *
+                              //             0.01), // Adjust the border radius as needed
+                              //       ),
+                              //     ),
+                              //     child: Text(
+                              //       'Update',
+                              //       style: TextStyle(
+                              //         fontSize: Height * 0.018,
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
                               SizedBox(
                                 width: Width * 0.02,
                               ),

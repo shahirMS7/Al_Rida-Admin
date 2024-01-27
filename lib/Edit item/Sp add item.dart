@@ -2,25 +2,26 @@ import 'package:admin/Edit%20item/edit%20alert.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SpItemDetails extends StatefulWidget {
-  final String title;
-  final String discription;
-  final String price;
-  final String image;
+//
+class SpItemAdd extends StatefulWidget {
+//   final String title;
+//   final String discription;
+//   final String price;
+//   final String image;
 
-  const SpItemDetails({
-    super.key,
-    required this.title,
-    required this.discription,
-    required this.price,
-    required this.image,
-  });
+  // const SpItemAdd({
+  //   super.key,
+  //   required this.title,
+  //   required this.discription,
+  //   required this.price,
+  //   required this.image,
+  // });
 
   @override
-  State<SpItemDetails> createState() => _SpItemDetailsState();
+  State<SpItemAdd> createState() => _SpItemAddState();
 }
 
-class _SpItemDetailsState extends State<SpItemDetails> {
+class _SpItemAddState extends State<SpItemAdd> {
   @override
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
@@ -83,7 +84,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(Width * 0.015),
                           border: Border.all(),
-                          color: Colors.white.withOpacity(0.25)),
+                          color: Colors.white.withOpacity(0.4)),
                       child: Column(children: [
                         SizedBox(
                           height: Height * 0.03,
@@ -95,29 +96,12 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                               width: Width * 0.02,
                             ),
                             Text(
-                              widget.title,
+                              'title?',
                               style: TextStyle(
                                   fontSize: Height * 0.04,
                                   fontWeight: FontWeight.bold),
                             ),
                             Spacer(),
-                            InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                  height: Height * 0.06,
-                                  width: Width * 0.06,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Color(0xff911f2a),
-                                    ),
-                                    child: Icon(
-                                      Icons.delete_outline_outlined,
-                                      size: Height * 0.05,
-                                      color: Colors.white,
-                                    ),
-                                  )),
-                            ),
                             SizedBox(
                               height: Height * 0.05,
                               width: Width * 0.07,
@@ -126,8 +110,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                   // Add your button click logic here
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.blueAccent
-                                      .shade400, // Background color of the button
+                                  backgroundColor: Color(0xff3C8A3C),
                                   foregroundColor: Colors.white, // Text color
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(Height *
@@ -135,7 +118,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                   ),
                                 ),
                                 child: Text(
-                                  'Update',
+                                  'Create',
                                   style: TextStyle(
                                     fontSize: Height * 0.018,
                                   ),
@@ -178,10 +161,11 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                       decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(
                                               Width * 0.01),
-                                          image: DecorationImage(
-                                            image: AssetImage(widget.image),
-                                            fit: BoxFit.cover,
-                                          )),
+                                          color: Colors.grey.shade200),
+                                      child: Icon(
+                                        Icons.photo,
+                                        size: Width * 0.1,
+                                      ),
                                     ),
                                     SizedBox(
                                       width: Width * 0.05,
@@ -437,7 +421,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                       width: Width * 0.02,
                                     ),
                                     Text(
-                                      widget.discription,
+                                      'discription?',
                                       style: TextStyle(fontSize: Width * 0.015),
                                     ),
                                     SizedBox(
@@ -467,7 +451,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                           SizedBox(
                                             width: Width * 0.01,
                                           ),
-                                          Text('offer',
+                                          Text('offer?',
                                               style: TextStyle(
                                                   fontSize: Height * 0.02,
                                                   fontWeight: FontWeight.bold,
@@ -501,7 +485,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                             width: Width * 0.01,
                                           ),
                                           Text(
-                                            widget.price,
+                                            'price?',
                                             style: TextStyle(
                                                 fontSize: Height * 0.02,
                                                 fontWeight: FontWeight.bold,

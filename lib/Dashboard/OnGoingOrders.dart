@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/ongoing%20alert.dart';
 import 'package:flutter/material.dart';
 
 class OnGoingOrders extends StatelessWidget {
@@ -86,15 +87,11 @@ class OnGoingOrders extends StatelessWidget {
                           Container(
                               height: Height * 0.8,
                               width: Width * 0.75,
-                              child: ListView.separated(
+                              child: ListView.builder(
                                   padding: EdgeInsets.symmetric(
                                       vertical: Height * 0.05),
                                   scrollDirection: Axis.vertical,
-                                  itemCount: 1,
-                                  separatorBuilder: (context, index) =>
-                                      SizedBox(
-                                          height: Height *
-                                              0.001), // Add a gap between items
+                                  itemCount: 4,
                                   itemBuilder: (context, index) {
                                     return Container(
                                       margin: EdgeInsets.all(Width * 0.02),
@@ -135,7 +132,7 @@ class OnGoingOrders extends StatelessWidget {
                                                   fontSize: Height * 0.02),
                                             ),
                                             SizedBox(
-                                              width: Width * 0.2,
+                                              width: Width * 0.25,
                                             ),
                                             Text('Address',
                                                 style: TextStyle(
@@ -179,17 +176,25 @@ class OnGoingOrders extends StatelessWidget {
                                                                   Height * 0.02,
                                                             ),
                                                           ),
-                                                          Text('1',style: TextStyle(
-                                                            fontSize: Height*0.02,
-                                                          ),),
+                                                          Text(
+                                                            '1',
+                                                            style: TextStyle(
+                                                              fontSize:
+                                                                  Height * 0.02,
+                                                            ),
+                                                          ),
                                                         ],
                                                       ),
                                                       SizedBox(
                                                         width: Width * 0.025,
                                                       ),
                                                       Column(
-                                                        mainAxisAlignment: MainAxisAlignment.start,
-                                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
                                                         children: [
                                                           Text(
                                                             'Item',
@@ -198,12 +203,15 @@ class OnGoingOrders extends StatelessWidget {
                                                                   Height * 0.02,
                                                             ),
                                                           ),
-                                                          Text('Fried Combo',style: TextStyle(
-                                                            fontSize: Height*0.02,
-                                                          ),),
+                                                          Text(
+                                                            'Fried Combo',
+                                                            style: TextStyle(
+                                                              fontSize:
+                                                                  Height * 0.02,
+                                                            ),
+                                                          ),
                                                         ],
                                                       ),
-
                                                       SizedBox(
                                                         width: Width * 0.19,
                                                       ),
@@ -222,7 +230,6 @@ class OnGoingOrders extends StatelessWidget {
                                                       )
                                                     ],
                                                   ),
-
                                                 ],
                                               ),
                                             ),
@@ -241,12 +248,12 @@ class OnGoingOrders extends StatelessWidget {
                                                 width: Width * 0.12,
                                                 child: ElevatedButton(
                                                   onPressed: () {
-                                                    // Add your button click logic here
+                                                    _showSignOutDialog(context);
                                                   },
                                                   style:
                                                       ElevatedButton.styleFrom(
                                                     backgroundColor: Color(
-                                                          0xff911f2a), // Background color of the button
+                                                        0xff911f2a), // Background color of the button
                                                     foregroundColor: Colors
                                                         .white, // Text color
                                                     shape:
@@ -267,14 +274,17 @@ class OnGoingOrders extends StatelessWidget {
                                               SizedBox(
                                                 height: Height * 0.04,
                                                 width: Width * 0.12,
+                                                child: AssignContainer(),
+                                              ),
+                                              SizedBox(
+                                                height: Height * 0.04,
+                                                width: Width * 0.12,
                                                 child: ElevatedButton(
-                                                  onPressed: () {
-                                                    // Add your button click logic here
-                                                  },
+                                                  onPressed: () {},
                                                   style:
                                                       ElevatedButton.styleFrom(
-                                                    backgroundColor: Color(
-                                                        0xff3C8A3C), // Background color of the button
+                                                    backgroundColor:
+                                                        Color(0xff3C8A3C),
                                                     foregroundColor: Colors
                                                         .white, // Text color
                                                     shape:
@@ -286,35 +296,6 @@ class OnGoingOrders extends StatelessWidget {
                                                   ),
                                                   child: Text(
                                                     'Accept',
-                                                    style: TextStyle(
-                                                      fontSize: Height * 0.02,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: Height * 0.04,
-                                                width: Width * 0.12,
-                                                child: ElevatedButton(
-                                                  onPressed: () {
-                                                    // Add your button click logic here
-                                                  },
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                    backgroundColor: Colors
-                                                        .blueAccent
-                                                        .shade400, // Background color of the button
-                                                    foregroundColor: Colors
-                                                        .white, // Text color
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                      borderRadius: BorderRadius
-                                                          .circular(Height *
-                                                              0.01), // Adjust the border radius as needed
-                                                    ),
-                                                  ),
-                                                  child: Text(
-                                                    'Assign',
                                                     style: TextStyle(
                                                       fontSize: Height * 0.02,
                                                     ),
@@ -343,6 +324,47 @@ class OnGoingOrders extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void _showSignOutDialog(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Sign Out'),
+          content: Text('Are you sure you want to sign out?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: Text('Cancel',style: TextStyle(color: Colors.grey.shade700),),
+            ),
+            TextButton(
+              onPressed: () {
+                // Perform sign out logic here
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: Container(
+                  height: Height * 0.04,
+                  width: Width * 0.04,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Width * 0.01),
+                    color: Color(0xff911f2a),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Reject',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+            ),
+          ],
+        );
+      },
     );
   }
 }

@@ -1,21 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class UserList extends StatelessWidget {
-  const UserList({super.key});
+class AdminNotification extends StatelessWidget {
+  const AdminNotification({super.key});
   @override
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
     final Width = MediaQuery.of(context).size.width;
     List<Map<String, dynamic>> items = [
-      {
-        'title': 'User2',
-      },
-      {
-        'title': 'User2',
-
-      },
-      ];
+      {'title': 'Delivery Boy 1', 'subtitle': 'is online', 'time': '8:29 PM'},
+      {'title': 'Order No:002', 'subtitle': 'delivered', 'time': '8:40 PM'},
+    ];
 
     return Scaffold(
       body: Container(
@@ -87,53 +81,35 @@ class UserList extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Users List',
+                                'Notifications',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
-                              // InkWell(
-                              //   onTap: () {},
-                              //   child: SizedBox(
-                              //       height: Height * 0.07,
-                              //       width: Width * 0.06,
-                              //       child: Container(
-                              //         decoration: BoxDecoration(
-                              //           shape: BoxShape.circle,
-                              //           color: Color(0xff3C8A3C),
-                              //         ),
-                              //         child: Icon(
-                              //           Icons.add,
-                              //           size: Height * 0.05,
-                              //           color: Colors.white,
-                              //         ),
-                              //       )),
-                              // ),
-                              // SizedBox(
-                              //   height: Height * 0.05,
-                              //   width: Width * 0.07,
-                              //   child: ElevatedButton(
-                              //     onPressed: () {
-                              //       // Add your button click logic here
-                              //     },
-                              //     style: ElevatedButton.styleFrom(
-                              //       backgroundColor: Colors.blueAccent
-                              //           .shade400, // Background color of the button
-                              //       foregroundColor: Colors.white, // Text color
-                              //       shape: RoundedRectangleBorder(
-                              //         borderRadius: BorderRadius.circular(Height *
-                              //             0.01), // Adjust the border radius as needed
-                              //       ),
-                              //     ),
-                              //     child: Text(
-                              //       'Update',
-                              //       style: TextStyle(
-                              //         fontSize: Height * 0.018,
-                              //       ),
-                              //     ),
-                              //   ),
-                              // ),
+                              SizedBox(
+                                height: Height * 0.05,
+                                width: Width * 0.07,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    // Add your button click logic here
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color(0xff911f2a),
+                                    foregroundColor: Colors.white, // Text color
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(Height *
+                                          0.01), // Adjust the border radius as needed
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Clear',
+                                    style: TextStyle(
+                                      fontSize: Height * 0.018,
+                                    ),
+                                  ),
+                                ),
+                              ),
                               SizedBox(
                                 width: Width * 0.02,
                               ),
@@ -172,13 +148,25 @@ class UserList extends StatelessWidget {
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: Height * 0.03),
                                             ),
+                                            SizedBox(
+                                              width: Width * 0.02,
+                                            ),
+                                            // Spacer(),
+                                            Text(
+                                              items[index]['subtitle'],
+                                              style: TextStyle(
+                                                  // fontWeight: FontWeight.bold,
+                                                  fontSize: Height * 0.03,
+                                                  color: Color(0xff3C8A3C)),
+                                            ),
                                             Spacer(),
-                                            IconButton(
-                                              iconSize: Height * 0.05,
-                                              onPressed: () {},
-                                              icon: Icon(Icons
-                                                  .delete_outline_outlined),
-                                              color: Color(0xff911f2a),
+                                            Text(
+                                              items[index]['time'],
+                                              style: TextStyle(
+                                                // fontWeight: FontWeight.bold,
+                                                fontSize: Height * 0.02,
+                                                color: Color(0xff911f2a),
+                                              ),
                                             ),
                                             SizedBox(
                                               width: Width * 0.05,

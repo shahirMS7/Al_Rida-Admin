@@ -1,21 +1,22 @@
+import 'package:admin/Edit%20item/deliveryboy%20add.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class UserList extends StatelessWidget {
-  const UserList({super.key});
+class DelievryBoy extends StatelessWidget {
+  const DelievryBoy({super.key});
   @override
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
     final Width = MediaQuery.of(context).size.width;
     List<Map<String, dynamic>> items = [
       {
-        'title': 'User2',
+        'title': 'Deliveryboy 1',
       },
       {
-        'title': 'User2',
+        'title': 'Deliveryboy 2',
 
       },
-      ];
+    ];
 
     return Scaffold(
       body: Container(
@@ -87,29 +88,31 @@ class UserList extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Users List',
+                                'Delivery Boy',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
                               ),
                               Spacer(),
-                              // InkWell(
-                              //   onTap: () {},
-                              //   child: SizedBox(
-                              //       height: Height * 0.07,
-                              //       width: Width * 0.06,
-                              //       child: Container(
-                              //         decoration: BoxDecoration(
-                              //           shape: BoxShape.circle,
-                              //           color: Color(0xff3C8A3C),
-                              //         ),
-                              //         child: Icon(
-                              //           Icons.add,
-                              //           size: Height * 0.05,
-                              //           color: Colors.white,
-                              //         ),
-                              //       )),
-                              // ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> AddDelievryBoy()));
+                                },
+                                child: SizedBox(
+                                    height: Height * 0.07,
+                                    width: Width * 0.06,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Color(0xff3C8A3C),
+                                      ),
+                                      child: Icon(
+                                        Icons.add,
+                                        size: Height * 0.05,
+                                        color: Colors.white,
+                                      ),
+                                    )),
+                              ),
                               // SizedBox(
                               //   height: Height * 0.05,
                               //   width: Width * 0.07,
@@ -147,8 +150,8 @@ class UserList extends StatelessWidget {
                               width: Width * 0.8,
                               // color: Colors.greenAccent,
                               child: ListView.builder(
-                                  // padding: EdgeInsets.symmetric(
-                                  //     vertical: Height * 0.05),
+                                // padding: EdgeInsets.symmetric(
+                                //     vertical: Height * 0.05),
                                   scrollDirection: Axis.vertical,
                                   itemCount: items.length,
                                   itemBuilder: (context, index) {
@@ -178,7 +181,7 @@ class UserList extends StatelessWidget {
                                               onPressed: () {},
                                               icon: Icon(Icons
                                                   .delete_outline_outlined),
-                                              color: Color(0xff911f2a),
+                                              color:  Color(0xff911f2a),
                                             ),
                                             SizedBox(
                                               width: Width * 0.05,

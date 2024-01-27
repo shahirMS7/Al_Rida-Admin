@@ -200,16 +200,13 @@ class _MyShopState extends State<MyShop> {
                                         width: Width * 0.05,
                                         height: Height * 0.06,
                                         alignment: Alignment.center,
-                                        child: Center(child: Text('Action')),
+                                        child: Center(child: Text('')),
                                       ),
                                     ),
                                   ],
                                   rows: List<DataRow>.generate(
                                     _data.length,
                                         (index) => DataRow(
-                                      // decoration: BoxDecoration(
-                                      //   border: Border.all(color: Colors.black),
-                                      // ),
                                       cells: [
                                         DataCell(
                                           Container(

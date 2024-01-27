@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Item%20details.dart';
 import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,22 +13,22 @@ class Breads extends StatelessWidget {
       {
         'title': 'Bun',
         'image': 'asset/images/menu/bun.jpg',
-        'page': SpItemDetails(title: 'Bun',image:'asset/images/menu/bun.jpg',price: '9',discription:'Bun',)
+        'page': ItemDetails(title: 'Bun',image:'asset/images/menu/bun.jpg',price: '9',discription:'Bun',)
       },
       {
         'title': 'Kuboose',
         'image': 'asset/images/menu/kuboose.jpg',
-        'page': SpItemDetails(title: 'Kuboose',image:'asset/images/menu/kuboose.jpg',price: '9',discription:'Kuboose',)
+        'page': ItemDetails(title: 'Kuboose',image:'asset/images/menu/kuboose.jpg',price: '9',discription:'Kuboose',)
       },
       {
         'title': 'Butter Bread',
         'image': 'asset/images/menu/buttur-rotti-min.jpg',
-        'page': SpItemDetails(title: 'Butter Bread',image:'asset/images/menu/buttur-rotti-min.jpg',price: '19',discription: 'Butter Bread',)
+        'page': ItemDetails(title: 'Butter Bread',image:'asset/images/menu/buttur-rotti-min.jpg',price: '19',discription: 'Butter Bread',)
       },
       {
         'title': 'Garlic Bread',
         'image': 'asset/images/menu/garlic-bread-min.jpg',
-        'page': SpItemDetails(title: 'Garlic Bread',image:'asset/images/menu/garlic-bread-min.jpg',price: '19',discription:'Garlic Bread',)
+        'page': ItemDetails(title: 'Garlic Bread',image:'asset/images/menu/garlic-bread-min.jpg',price: '19',discription:'Garlic Bread',)
       },
 
 
@@ -103,7 +104,7 @@ class Breads extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Special offer',
+                                'Breads',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
@@ -145,7 +146,7 @@ class Breads extends StatelessWidget {
                                   child: Text(
                                     'Update',
                                     style: TextStyle(
-                                      fontSize: Height * 0.02,
+                                      fontSize: Height * 0.018,
                                     ),
                                   ),
                                 ),

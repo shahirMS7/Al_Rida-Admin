@@ -2,25 +2,15 @@ import 'package:admin/Edit%20item/edit%20alert.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SpItemDetails extends StatefulWidget {
-  final String title;
-  final String discription;
-  final String price;
-  final String image;
 
-  const SpItemDetails({
-    super.key,
-    required this.title,
-    required this.discription,
-    required this.price,
-    required this.image,
-  });
+class MenuItemAdd extends StatefulWidget {
+
 
   @override
-  State<SpItemDetails> createState() => _SpItemDetailsState();
+  State<MenuItemAdd> createState() => _MenuItemAddState();
 }
 
-class _SpItemDetailsState extends State<SpItemDetails> {
+class _MenuItemAddState extends State<MenuItemAdd> {
   @override
   Widget build(BuildContext context) {
     final Height = MediaQuery.of(context).size.height;
@@ -83,7 +73,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(Width * 0.015),
                           border: Border.all(),
-                          color: Colors.white.withOpacity(0.25)),
+                          color: Colors.white.withOpacity(0.4)),
                       child: Column(children: [
                         SizedBox(
                           height: Height * 0.03,
@@ -95,29 +85,12 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                               width: Width * 0.02,
                             ),
                             Text(
-                              widget.title,
+                              'title?',
                               style: TextStyle(
                                   fontSize: Height * 0.04,
                                   fontWeight: FontWeight.bold),
                             ),
                             Spacer(),
-                            InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                  height: Height * 0.06,
-                                  width: Width * 0.06,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Color(0xff911f2a),
-                                    ),
-                                    child: Icon(
-                                      Icons.delete_outline_outlined,
-                                      size: Height * 0.05,
-                                      color: Colors.white,
-                                    ),
-                                  )),
-                            ),
                             SizedBox(
                               height: Height * 0.05,
                               width: Width * 0.07,
@@ -126,8 +99,8 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                   // Add your button click logic here
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.blueAccent
-                                      .shade400, // Background color of the button
+                                  backgroundColor: Color(
+                                      0xff3C8A3C), // Background color of the button
                                   foregroundColor: Colors.white, // Text color
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(Height *
@@ -135,7 +108,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                   ),
                                 ),
                                 child: Text(
-                                  'Update',
+                                  'Create',
                                   style: TextStyle(
                                     fontSize: Height * 0.018,
                                   ),
@@ -176,12 +149,11 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                       height: Height * 0.35,
                                       width: Width * 0.3,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                              Width * 0.01),
-                                          image: DecorationImage(
-                                            image: AssetImage(widget.image),
-                                            fit: BoxFit.cover,
-                                          )),
+                                          borderRadius:
+                                          BorderRadius.circular(Width * 0.01),
+                                          color: Colors.grey.shade200
+                                      ),
+                                      child: Icon(Icons.photo,size: Width*0.1,),
                                     ),
                                     SizedBox(
                                       width: Width * 0.05,
@@ -189,7 +161,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                     Column(
                                       children: [
                                         Container(
-                                          height: Height * 0.06,
+                                          height:Height*0.08,
                                           width: Width * 0.35,
                                           child: ElevatedButton(
                                               onPressed: () {
@@ -200,7 +172,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                     vertical: 15,
                                                     horizontal: 30),
                                                 backgroundColor:
-                                                    Colors.grey.shade100,
+                                                Colors.grey.shade100,
                                                 foregroundColor: Color(
                                                     0xff911f2a), // Button text color
                                                 side: BorderSide(
@@ -210,19 +182,19 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Width *
-                                                          0.01), // Border radius for rounded corners
+                                                      0.01), // Border radius for rounded corners
                                                 ),
                                               ),
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
+                                                MainAxisAlignment
+                                                    .spaceBetween,
                                                 children: [
                                                   Text(
                                                     'Change Title',
                                                     style: TextStyle(
                                                         fontSize:
-                                                            Width * 0.015),
+                                                        Width * 0.015),
                                                   ),
                                                   Image.asset(
                                                     'asset/icons/edit-text.png',
@@ -236,7 +208,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                           height: Height * 0.01,
                                         ),
                                         Container(
-                                          height: Height * 0.06,
+                                          height:Height*0.08,
                                           width: Width * 0.35,
                                           child: ElevatedButton(
                                               onPressed: () {
@@ -247,7 +219,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                     vertical: 15,
                                                     horizontal: 30),
                                                 backgroundColor:
-                                                    Colors.grey.shade100,
+                                                Colors.grey.shade100,
                                                 foregroundColor: Color(
                                                     0xff911f2a), // Button text color
                                                 side: BorderSide(
@@ -257,19 +229,19 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Width *
-                                                          0.01), // Border radius for rounded corners
+                                                      0.01), // Border radius for rounded corners
                                                 ),
                                               ),
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
+                                                MainAxisAlignment
+                                                    .spaceBetween,
                                                 children: [
                                                   Text(
                                                     'Change Image',
                                                     style: TextStyle(
                                                         fontSize:
-                                                            Width * 0.015),
+                                                        Width * 0.015),
                                                   ),
                                                   Image.asset(
                                                     'asset/icons/image-editing.png',
@@ -283,7 +255,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                           height: Height * 0.01,
                                         ),
                                         Container(
-                                          height: Height * 0.06,
+                                          height:Height*0.08,
                                           width: Width * 0.35,
                                           child: ElevatedButton(
                                               onPressed: () {
@@ -294,7 +266,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                     vertical: 15,
                                                     horizontal: 30),
                                                 backgroundColor:
-                                                    Colors.grey.shade100,
+                                                Colors.grey.shade100,
                                                 foregroundColor: Color(
                                                     0xff911f2a), // Button text color
                                                 side: BorderSide(
@@ -304,19 +276,19 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Width *
-                                                          0.01), // Border radius for rounded corners
+                                                      0.01), // Border radius for rounded corners
                                                 ),
                                               ),
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
+                                                MainAxisAlignment
+                                                    .spaceBetween,
                                                 children: [
                                                   Text(
                                                     'Change Discription',
                                                     style: TextStyle(
                                                         fontSize:
-                                                            Width * 0.015),
+                                                        Width * 0.015),
                                                   ),
                                                   Image.asset(
                                                     'asset/icons/edit-text.png',
@@ -330,7 +302,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                           height: Height * 0.01,
                                         ),
                                         Container(
-                                          height: Height * 0.06,
+                                          height:Height*0.08,
                                           width: Width * 0.35,
                                           child: ElevatedButton(
                                               onPressed: () {
@@ -341,7 +313,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                     vertical: 15,
                                                     horizontal: 30),
                                                 backgroundColor:
-                                                    Colors.grey.shade100,
+                                                Colors.grey.shade100,
                                                 foregroundColor: Color(
                                                     0xff911f2a), // Button text color
                                                 side: BorderSide(
@@ -351,19 +323,19 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Width *
-                                                          0.01), // Border radius for rounded corners
+                                                      0.01), // Border radius for rounded corners
                                                 ),
                                               ),
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
+                                                MainAxisAlignment
+                                                    .spaceBetween,
                                                 children: [
                                                   Text(
                                                     'Change Price',
                                                     style: TextStyle(
                                                         fontSize:
-                                                            Width * 0.015),
+                                                        Width * 0.015),
                                                   ),
                                                   Image.asset(
                                                     'asset/icons/rupee.png',
@@ -375,50 +347,6 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                         ),
                                         SizedBox(
                                           height: Height * 0.01,
-                                        ),
-                                        Container(
-                                          height: Height * 0.06,
-                                          width: Width * 0.35,
-                                          child: ElevatedButton(
-                                              onPressed: () {
-                                                // Add your button click logic here
-                                              },
-                                              style: ElevatedButton.styleFrom(
-                                                padding: EdgeInsets.symmetric(
-                                                    vertical: 15,
-                                                    horizontal: 30),
-                                                backgroundColor:
-                                                    Colors.grey.shade100,
-                                                foregroundColor: Color(
-                                                    0xff911f2a), // Button text color
-                                                side: BorderSide(
-                                                    color: Colors.black,
-                                                    width: Width *
-                                                        0.001), // Border color
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius
-                                                      .circular(Width *
-                                                          0.01), // Border radius for rounded corners
-                                                ),
-                                              ),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    'Change Offer',
-                                                    style: TextStyle(
-                                                        fontSize:
-                                                            Width * 0.015),
-                                                  ),
-                                                  Image.asset(
-                                                    'asset/icons/discount.png',
-                                                    width: Width * 0.05,
-                                                    height: Height * 0.05,
-                                                  ),
-                                                ],
-                                              )),
                                         ),
                                         SizedBox(
                                           height: Height * 0.01,
@@ -437,7 +365,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                       width: Width * 0.02,
                                     ),
                                     Text(
-                                      widget.discription,
+                                      'discription?',
                                       style: TextStyle(fontSize: Width * 0.015),
                                     ),
                                     SizedBox(
@@ -451,39 +379,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                     SizedBox(
                                       width: Width * 0.01,
                                     ),
-                                    //offer
-                                    Container(
-                                      height: Height * 0.07,
-                                      width: Width * 0.15,
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                              Width * 0.01),
-                                          color: Colors.white,
-                                          border: Border.all(
-                                              color: Color(0xff911f2a),
-                                              width: Width * 0.001)),
-                                      child: Row(
-                                        children: [
-                                          SizedBox(
-                                            width: Width * 0.01,
-                                          ),
-                                          Text('offer',
-                                              style: TextStyle(
-                                                  fontSize: Height * 0.02,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.black)),
-                                          Spacer(),
-                                          Image.asset(
-                                            'asset/icons/discount.png',
-                                            width: Width * 0.05,
-                                            height: Height * 0.04,
-                                          ),
-                                          SizedBox(
-                                            width: Width * 0.005,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+
                                     Spacer(),
                                     Container(
                                       height: Height * 0.07,
@@ -501,7 +397,7 @@ class _SpItemDetailsState extends State<SpItemDetails> {
                                             width: Width * 0.01,
                                           ),
                                           Text(
-                                            widget.price,
+                                            'price?',
                                             style: TextStyle(
                                                 fontSize: Height * 0.02,
                                                 fontWeight: FontWeight.bold,
@@ -596,7 +492,7 @@ void _showAlertDialog(BuildContext context) {
         title: Text('Enter title here'),
         content: TextField(
           controller: textFieldController,
-          decoration: InputDecoration(hintText: 'Type something...'),
+          decoration: InputDecoration(hintText: 'title..'),
         ),
         actions: <Widget>[
           TextButton(
@@ -625,7 +521,7 @@ void _showAlertDialog(BuildContext context) {
               ),
               child: Center(
                 child: Text(
-                  'OK',
+                  'Save',
                   style: TextStyle(
                     color: Colors.white,
                   ),

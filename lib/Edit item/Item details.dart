@@ -130,7 +130,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                 child: Text(
                                   'Update',
                                   style: TextStyle(
-                                    fontSize: Height * 0.02,
+                                    fontSize: Height * 0.018,
                                   ),
                                 ),
                               ),
@@ -181,7 +181,35 @@ class _ItemDetailsState extends State<ItemDetails> {
                                     Column(
                                       children: [
                                         Container(
-                                          height:Height*0.1,
+                                          height:Height*0.08,
+                                          width: Width*0.35,
+                                          child: ElevatedButton(
+                                              onPressed: () {
+                                                // Add your button click logic here
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                                                backgroundColor: Colors.grey.shade100,
+                                                foregroundColor:  Color(0xff911f2a), // Button text color
+                                                side: BorderSide(color: Colors.black, width: Width*0.001), // Border color
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(Width*0.01), // Border radius for rounded corners
+                                                ),
+
+                                              ),
+                                              child:
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  Text('Change Title',style: TextStyle(fontSize: Width*0.015),),
+                                                  Image.asset('asset/icons/edit-text.png',width: Width*0.05,
+                                                    height: Height*0.05,),
+                                                ],
+                                              )),
+                                        ),
+                                        SizedBox(height: Height*0.01,),
+                                        Container(
+                                          height:Height*0.08,
                                           width: Width*0.35,
                                           child: ElevatedButton(
                                               onPressed: () {
@@ -209,7 +237,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                         ),
                                         SizedBox(height: Height*0.01,),
                                         Container(
-                                          height:Height*0.1,
+                                          height:Height*0.08,
                                           width: Width*0.35,
                                           child: ElevatedButton(
                                               onPressed: () {
@@ -229,7 +257,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                               Row(
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
-                                                  Text('Change Text',style: TextStyle(fontSize: Width*0.015),),
+                                                  Text('Change Discription',style: TextStyle(fontSize: Width*0.015),),
                                                   Image.asset('asset/icons/edit-text.png',width: Width*0.05,
                                                     height: Height*0.05,),
                                                 ],
@@ -237,7 +265,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                         ),
                                         SizedBox(height: Height*0.01,),
                                         Container(
-                                          height:Height*0.1,
+                                          height:Height*0.08,
                                           width: Width*0.35,
                                           child: ElevatedButton(
                                               onPressed: () {

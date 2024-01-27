@@ -1,3 +1,4 @@
+import 'package:admin/Edit%20item/Item%20details.dart';
 import 'package:admin/Edit%20item/Sp%20Item%20details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,32 +13,32 @@ class Drinks extends StatelessWidget {
       {
         'title': '7 Up',
         'image': 'asset/images/menu/7up.png',
-        'page': SpItemDetails(title: '7 Up',image:'asset/images/menu/7up.png',price: '39',discription: '7 Up' ,)
+        'page': ItemDetails(title: '7 Up',image:'asset/images/menu/7up.png',price: '39',discription: '7 Up' ,)
       },
       {
         'title': 'Coca Cola',
         'image': 'asset/images/menu/coca.png',
-        'page': SpItemDetails(title:  'Coca Cola',image:'asset/images/menu/coca.png',price: '39',discription:  'Coca Cola' ,)
+        'page': ItemDetails(title:  'Coca Cola',image:'asset/images/menu/coca.png',price: '39',discription:  'Coca Cola' ,)
       },
       {
         'title': 'Pepsi',
         'image': 'asset/images/menu/pepsi.png',
-        'page': SpItemDetails(title: 'Pepsi',image:'asset/images/menu/pepsi.png',price: '39',discription: 'Pepsi' ,)
+        'page': ItemDetails(title: 'Pepsi',image:'asset/images/menu/pepsi.png',price: '39',discription: 'Pepsi' ,)
       },
       {
         'title': 'Mirinda',
         'image': 'asset/images/menu/miri.png',
-        'page': SpItemDetails(title: 'Mirinda',image:'asset/images/menu/miri.png',price: '39',discription: 'Mirinda',)
+        'page': ItemDetails(title: 'Mirinda',image:'asset/images/menu/miri.png',price: '39',discription: 'Mirinda',)
       },
       {
         'title': 'Montain Dew',
         'image': 'asset/images/menu/mountain dew.png',
-        'page': SpItemDetails(title:'Montain Dew',image:'asset/images/menu/mountain dew.png',price: '39',discription: 'Montain Dew' ,)
+        'page': ItemDetails(title:'Montain Dew',image:'asset/images/menu/mountain dew.png',price: '39',discription: 'Montain Dew' ,)
       },
       {
         'title': 'Water',
         'image': 'asset/images/menu/water.png',
-        'page': SpItemDetails(title:'Water',image:'asset/images/menu/water.png',price: '39',discription: 'Water' ,)
+        'page': ItemDetails(title:'Water',image:'asset/images/menu/water.png',price: '39',discription: 'Water' ,)
       },
 
 
@@ -112,7 +113,7 @@ class Drinks extends StatelessWidget {
                                 width: Width * 0.02,
                               ),
                               Text(
-                                'Special offer',
+                                'Drinks',
                                 style: TextStyle(
                                     fontSize: Height * 0.04,
                                     fontWeight: FontWeight.bold),
@@ -154,7 +155,7 @@ class Drinks extends StatelessWidget {
                                   child: Text(
                                     'Update',
                                     style: TextStyle(
-                                      fontSize: Height * 0.02,
+                                      fontSize: Height * 0.018,
                                     ),
                                   ),
                                 ),
