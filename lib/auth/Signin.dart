@@ -1,4 +1,5 @@
 import 'package:admin/Dashboard/home.dart';
+import 'package:admin/kitchen/home.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -39,9 +40,12 @@ class _SignInState extends State<SignIn> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    IconButton(onPressed: (){}, icon: Icon(Icons.supervised_user_circle_outlined),iconSize: Height*0.06,color:Color(0xffe97427),),
+                    IconButton(onPressed: (){
+                      _showOptionsDialog(context);
+
+                    }, icon: Icon(Icons.supervised_user_circle_outlined),iconSize: Height*0.06,color:Color(0xffe97427),),
                     // Spacer(),
-                    SizedBox(width: Width*.,)
+                    SizedBox(width: Width*0.4,)
                   ],
                 ),
                 Image.asset(
@@ -203,6 +207,36 @@ class _SignInState extends State<SignIn> {
           ],
         ),
       ),
+    );
+  }
+  void _showOptionsDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Select User type'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                title: Text('Admin'),
+                onTap: () {
+                  // Handle Customer option click
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text('Kitchen'),
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context) =>KitchenHome() ,) );
+                  // Handle Delivery Boy option click
+                  // Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
